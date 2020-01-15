@@ -61,15 +61,50 @@ namespace picoyPlaca
             //Hour
             DateTime hourAux = new DateTime();            
             hourAux = Convert.ToDateTime(picoPlaca.Hour);
-            var hourtime = hourAux.ToString("HH:mm");
-            Console.WriteLine(hourtime);
+            var hourtime = hourAux.ToString("HHmm");
+            int nowHours = Convert.ToInt32(hourtime);
+            Console.WriteLine(nowHours);
 
 
 
             // PREDICTOR
             if ( day == "Saturday" || day == "Sunday")
             {
-                richTextBox1.Text = "SI PUEDE CIRCULAR TODO EL DIA";
+                richTextBox1.Text = "SI PUEDE CIRCULAR TODO EL DIA EN Su Vehiculo";
+
+            }
+
+            else if ( day == "Monday"  )
+            {
+                if( numberAux == 1 || numberAux == 2)
+                {
+                    if (nowHours >= 0730 && nowHours <= 0930)
+                    {
+                        Console.WriteLine("No puede Circular desde  7:30 a 9:30");
+                        
+
+                    }
+
+                     else if (nowHours >= 1630 && nowHours <= 1930)
+                    {
+                        Console.WriteLine("No puede Circular desde  16:30 a 19:30");
+
+
+                    }
+
+                    else
+                    {
+                        Console.WriteLine("puede Circular");
+                    }
+
+                }
+
+                else
+                    {
+                        Console.WriteLine("puede Circular");
+                    }
+                
+                               
 
             }
 
@@ -79,5 +114,6 @@ namespace picoyPlaca
         {
             
         }
+
     }
 }
