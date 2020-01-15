@@ -28,34 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnIngresar = new System.Windows.Forms.Button();
-            this.txtNumeroPlaca = new System.Windows.Forms.TextBox();
+            this.txtNumber = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.mtxtFecha = new System.Windows.Forms.MaskedTextBox();
-            this.mtxtHora = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtDate = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtHour = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.btnSubmit = new System.Windows.Forms.Button();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
-            // btnIngresar
+            // txtNumber
             // 
-            this.btnIngresar.Location = new System.Drawing.Point(448, 89);
-            this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(77, 29);
-            this.btnIngresar.TabIndex = 0;
-            this.btnIngresar.Text = "Ingresar Datos";
-            this.btnIngresar.UseVisualStyleBackColor = true;
-            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
-            // 
-            // txtNumeroPlaca
-            // 
-            this.txtNumeroPlaca.Location = new System.Drawing.Point(58, 95);
-            this.txtNumeroPlaca.Name = "txtNumeroPlaca";
-            this.txtNumeroPlaca.Size = new System.Drawing.Size(114, 22);
-            this.txtNumeroPlaca.TabIndex = 1;
-            this.txtNumeroPlaca.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtNumber.Location = new System.Drawing.Point(58, 95);
+            this.txtNumber.MaxLength = 4;
+            this.txtNumber.Name = "txtNumber";
+            this.txtNumber.Size = new System.Drawing.Size(114, 22);
+            this.txtNumber.TabIndex = 1;
+            this.txtNumber.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -77,23 +68,23 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "INGRESE LOS SIGUIENTES DATOS";
             // 
-            // mtxtFecha
+            // mtxtDate
             // 
-            this.mtxtFecha.Location = new System.Drawing.Point(242, 95);
-            this.mtxtFecha.Mask = "00/00/0000";
-            this.mtxtFecha.Name = "mtxtFecha";
-            this.mtxtFecha.Size = new System.Drawing.Size(80, 22);
-            this.mtxtFecha.TabIndex = 6;
-            this.mtxtFecha.ValidatingType = typeof(System.DateTime);
+            this.mtxtDate.Location = new System.Drawing.Point(242, 95);
+            this.mtxtDate.Mask = "00/00/0000";
+            this.mtxtDate.Name = "mtxtDate";
+            this.mtxtDate.Size = new System.Drawing.Size(93, 22);
+            this.mtxtDate.TabIndex = 6;
+            this.mtxtDate.ValidatingType = typeof(System.DateTime);
             // 
-            // mtxtHora
+            // mtxtHour
             // 
-            this.mtxtHora.Location = new System.Drawing.Point(371, 95);
-            this.mtxtHora.Mask = "00:00";
-            this.mtxtHora.Name = "mtxtHora";
-            this.mtxtHora.Size = new System.Drawing.Size(41, 22);
-            this.mtxtHora.TabIndex = 7;
-            this.mtxtHora.ValidatingType = typeof(System.DateTime);
+            this.mtxtHour.Location = new System.Drawing.Point(371, 95);
+            this.mtxtHour.Mask = "00:00";
+            this.mtxtHour.Name = "mtxtHour";
+            this.mtxtHour.Size = new System.Drawing.Size(51, 22);
+            this.mtxtHour.TabIndex = 7;
+            this.mtxtHour.ValidatingType = typeof(System.DateTime);
             // 
             // label3
             // 
@@ -113,47 +104,56 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "Hora";
             // 
-            // listBox1
+            // btnSubmit
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(58, 180);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(450, 84);
-            this.listBox1.TabIndex = 10;
+            this.btnSubmit.Location = new System.Drawing.Point(448, 95);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(77, 32);
+            this.btnSubmit.TabIndex = 11;
+            this.btnSubmit.Text = "Submit";
+            this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(58, 169);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(453, 111);
+            this.richTextBox1.TabIndex = 13;
+            this.richTextBox1.Text = "";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 326);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.mtxtHora);
-            this.Controls.Add(this.mtxtFecha);
+            this.Controls.Add(this.mtxtHour);
+            this.Controls.Add(this.mtxtDate);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtNumeroPlaca);
-            this.Controls.Add(this.btnIngresar);
+            this.Controls.Add(this.txtNumber);
             this.Name = "Form1";
             this.Text = "Pico y PLaca ";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnIngresar;
-        private System.Windows.Forms.TextBox txtNumeroPlaca;
+        private System.Windows.Forms.TextBox txtNumber;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.MaskedTextBox mtxtFecha;
-        private System.Windows.Forms.MaskedTextBox mtxtHora;
+        private System.Windows.Forms.MaskedTextBox mtxtDate;
+        private System.Windows.Forms.MaskedTextBox mtxtHour;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }
 

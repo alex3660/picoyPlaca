@@ -12,6 +12,11 @@ namespace picoyPlaca
 {
     public partial class Form1 : Form
     {
+        //Variables
+        string day;
+        string lastNumber;
+        int numberAux;
+        
         public Form1()
         {
             InitializeComponent();
@@ -29,15 +34,49 @@ namespace picoyPlaca
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
+          
+            
+        }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            // Get Information
             picoPlaca picoPlaca = new picoPlaca();
-            picoPlaca.Numeroplaca = txtNumeroPlaca.Text;
-            picoPlaca.Fecha = mtxtFecha.Text;
-            picoPlaca.Hora = mtxtHora.Text;
+            picoPlaca.Number = txtNumber.Text;
+            picoPlaca.Date = mtxtDate.Text;
+            picoPlaca.Hour = mtxtHour.Text;
 
-            DateTime fechaAux = new DateTime();
-            fechaAux = Convert.ToDateTime(picoPlaca.Fecha);
-            Console.WriteLine(fechaAux);
+            //Day of the week
+            DateTime dateAux = new DateTime();
+            dateAux = Convert.ToDateTime(picoPlaca.Date);
+            day = dateAux.ToString("dddd");
+            Console.WriteLine(day);
 
+
+            //Number
+            lastNumber = picoPlaca.Number.Substring(picoPlaca.Number.Length - 1, 1);
+            numberAux = Convert.ToInt32(lastNumber);
+            Console.WriteLine(numberAux);
+
+            //Hour
+            DateTime hourAux = new DateTime();            
+            hourAux = Convert.ToDateTime(picoPlaca.Hour);
+            var hourtime = hourAux.ToString("HH:mm");
+            Console.WriteLine(hourtime);
+
+
+
+            // PREDICTOR
+            if ( day == "Saturday" || day == "Sunday")
+            {
+                richTextBox1.Text = "SI PUEDE CIRCULAR TODO EL DIA";
+
+            }
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
             
         }
     }

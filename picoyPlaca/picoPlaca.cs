@@ -9,25 +9,28 @@ namespace picoyPlaca
     class picoPlaca
     {
         
-        private string fecha;
-        private string numeroplaca;
-        private string hora;
+        private string date;
+        private string number;
+        private string hour;
 
-        
-        public string Fecha { get => fecha; set => fecha = value; }
-        public string Numeroplaca { get => numeroplaca; set => numeroplaca = value; }
-        public string Hora { get => hora; set => hora = value; }
-        
+        //Get and set
+        public string Date { get => date; set => date = value; }
+        public string Number { get => number; set => number = value; }
+        public string Hour { get => hour; set => hour = value; }
+
+
+        // Constructors
         public picoPlaca()
         {
 
         }
-        public picoPlaca(string fecha, string numeroplaca, string hora)
+        public picoPlaca(string date, string number, string hour)
         {
-            this.fecha = fecha;
-            this.numeroplaca = numeroplaca;
-            this.hora = hora;
+            this.date = date;
+            this.number = number;
+            this.hour = hour;
         }
 
+        
     }
 }
