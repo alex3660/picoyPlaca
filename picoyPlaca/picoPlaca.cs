@@ -31,6 +31,8 @@ namespace picoyPlaca
             this.hour = hour;
         }
 
+
+
         
     }
 }
