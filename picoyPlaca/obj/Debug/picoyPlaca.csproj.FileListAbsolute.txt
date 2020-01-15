@@ -1,0 +1,9 @@
+C:\Users\al_ag\source\repos\picoyPlaca\picoyPlaca\bin\Debug\picoyPlaca.exe.config
+C:\Users\al_ag\source\repos\picoyPlaca\picoyPlaca\bin\Debug\picoyPlaca.exe
+C:\Users\al_ag\source\repos\picoyPlaca\picoyPlaca\bin\Debug\picoyPlaca.pdb
+C:\Users\al_ag\source\repos\picoyPlaca\picoyPlaca\obj\Debug\picoyPlaca.csprojAssemblyReference.cache
+C:\Users\al_ag\source\repos\picoyPlaca\picoyPlaca\obj\Debug\picoyPlaca.Form1.resources
+C:\Users\al_ag\source\repos\picoyPlaca\picoyPlaca\obj\Debug\picoyPlaca.Properties.Resources.resources
+C:\Users\al_ag\source\repos\picoyPlaca\picoyPlaca\obj\Debug\picoyPlaca.csproj.GenerateResource.cache
+C:\Users\al_ag\source\repos\picoyPlaca\picoyPlaca\obj\Debug\picoyPlaca.exe
+C:\Users\al_ag\source\repos\picoyPlaca\picoyPlaca\obj\Debug\picoyPlaca.pdb
