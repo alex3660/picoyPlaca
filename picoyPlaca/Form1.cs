@@ -83,112 +83,14 @@ namespace picoyPlaca
 
 
             // PREDICTOR
-            picoPlacas(day, numberAux, nowHours);
+            richTextBox1.Text= picoPlaca.PicoPlacas(day, numberAux, nowHours);
                       
-
+            
 
         }
 
         
-        public void picoPlacas(string day, int numberAux, int nowHours)
-        {
-            switch (day)
-            {
-                case "Monday":
-                    if (numberAux == 1 || numberAux == 2)
-                    {
-                        message(nowHours);
-                    }
-
-                    else
-                    {
-                        richTextBox1.Text = "Puede Circular";
-                    }
-
-                    break;
-                case "Tuesday":
-                    if (numberAux == 3 || numberAux == 4)
-                    {
-                        message(nowHours);
-                    }
-
-                    else
-                    {
-                        richTextBox1.Text = "Puede Circular";
-                    }
-
-                    break;
-                case "Wednesday":
-                    if (numberAux == 5 || numberAux == 6)
-                    {
-                        message(nowHours);
-                    }
-
-                    else
-                    {
-                        richTextBox1.Text = "Puede Circular";
-                    }
-
-                    break;
-                case "Thursday":
-                    if (numberAux == 7 || numberAux == 8)
-                    {
-                        message(nowHours);
-                    }
-
-                    else
-                    {
-                        richTextBox1.Text = "Puede Circular";
-                    }
-
-                    break;
-                case "Friday":
-                    if (numberAux == 9 || numberAux == 0)
-                    {
-                        message(nowHours);
-                    }
-
-                    else
-                    {
-                        richTextBox1.Text = "Puede Circular";
-                    }
-                    break;
-
-                case "Saturday":
-
-                    richTextBox1.Text = "Puede Circular";
-                    break;
-
-                case "Sunday":
-
-                    richTextBox1.Text = "Puede Circular";
-
-                    break;
-            }
-
-        }
-        
-        public void message(int hour) 
-        {
-            if (hour >= 0730 && hour <= 0930)
-            {
-                richTextBox1.Text = "No puede Circular desde  7:30 a 9:30";
-
-
-            }
-
-            else if (hour >= 1630 && hour <= 1930)
-            {
-                richTextBox1.Text = "No puede Circular desde  16:30 a 19:30";
-
-
-            }
-
-            else
-            {
-                richTextBox1.Text = "Puede Circular";
-            }
-        }
+       
 
 
 

@@ -31,8 +31,119 @@ namespace picoyPlaca
             this.hour = hour;
         }
 
+        public string PicoPlacas(string day, int numberAux, int nowHours)
+        {
+            string response;
+            switch (day)
+            {
+                case "Monday":
+                    if (numberAux == 1 || numberAux == 2)
+                    {
+                       return message(nowHours);
+                    }
+
+                    else
+                    {
+                        response = "Puede Circular";
+                        return response;
+                    }
+
+                    
+                case "Tuesday":
+                    if (numberAux == 3 || numberAux == 4)
+                    {
+                        return message(nowHours);
+                    }
+
+                    else
+                    {
+                        response = "Puede Circular";
+                        return response;
+                    }
+
+                    
+                case "Wednesday":
+                    if (numberAux == 5 || numberAux == 6)
+                    {
+                       return message(nowHours);
+                    }
+
+                    else
+                    {
+                        response = "Puede Circular";
+                        return response;
+                    }
+
+                    
+                case "Thursday":
+                    if (numberAux == 7 || numberAux == 8)
+                    {
+                       return message(nowHours);
+                    }
+
+                    else
+                    {
+                        response = "Puede Circular";
+                        return response;
+                    }
+
+                    
+                case "Friday":
+                    if (numberAux == 9 || numberAux == 0)
+                    {
+                        return message(nowHours);
+                    }
+
+                    else
+                    {
+                        response = "Puede Circular";
+                        return response;
+                    }
+                    
+
+                case "Saturday":
+
+                    response = "Puede Circular";
+                    return response;
+
+                case "Sunday":
+
+                    response = "Puede Circular";
+                    return response;
+
+                default:
+                    return null;
+            }
+            
+
+        }
+
+        public string message(int hour)
+        {
+            string response;
+            if (hour >= 0730 && hour <= 0930)
+            {
+                response= "No puede Circular desde  7:30 a 9:30";
+                return response;
 
 
-        
+            }
+
+            else if (hour >= 1630 && hour <= 1930)
+            {
+                response = "No puede Circular desde  16:30 a 19:30";
+                return response;
+
+
+            }
+
+            else
+            {
+                response = "Puede Circular";
+                return response;
+            }
+        }
+
+
     }
 }
