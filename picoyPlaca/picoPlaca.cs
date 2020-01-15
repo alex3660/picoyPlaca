@@ -31,9 +31,10 @@ namespace picoyPlaca
             this.hour = hour;
         }
 
+        //this method verify the date number of license to be aviable to be on the road
         public string PicoPlacas(string day, int numberAux, int nowHours)
         {
-            string response;
+            
             switch (day)
             {
                 case "Monday":
@@ -44,8 +45,7 @@ namespace picoyPlaca
 
                     else
                     {
-                        response = "Puede Circular";
-                        return response;
+                        return aviableorNot(2);
                     }
 
                     
@@ -57,8 +57,7 @@ namespace picoyPlaca
 
                     else
                     {
-                        response = "Puede Circular";
-                        return response;
+                        return aviableorNot(2);
                     }
 
                     
@@ -70,8 +69,7 @@ namespace picoyPlaca
 
                     else
                     {
-                        response = "Puede Circular";
-                        return response;
+                        return aviableorNot(2);
                     }
 
                     
@@ -83,8 +81,7 @@ namespace picoyPlaca
 
                     else
                     {
-                        response = "Puede Circular";
-                        return response;
+                        return aviableorNot(2);
                     }
 
                     
@@ -96,20 +93,17 @@ namespace picoyPlaca
 
                     else
                     {
-                        response = "Puede Circular";
-                        return response;
+                        return aviableorNot(2);
                     }
                     
 
                 case "Saturday":
 
-                    response = "Puede Circular";
-                    return response;
+                    return aviableorNot(2);
 
                 case "Sunday":
 
-                    response = "Puede Circular";
-                    return response;
+                    return aviableorNot(2);
 
                 default:
                     return null;
@@ -118,31 +112,57 @@ namespace picoyPlaca
 
         }
 
+        //this method verify the hours to aply pico y placa
         public string message(int hour)
         {
-            string response;
+            
             if (hour >= 0730 && hour <= 0930)
-            {
-                response= "No puede Circular desde  7:30 a 9:30";
-                return response;
-
-
+            {               
+                return aviableorNot(0);
             }
 
             else if (hour >= 1630 && hour <= 1930)
+            {                
+                return aviableorNot(1);            
+            }
+
+
+            else
+            {                
+                return aviableorNot(2);
+            }
+        }
+
+
+        //this method return the message if you are aviable or not to be on the road
+
+        public  string aviableorNot (int value)
+        {
+            string response;
+            if (value == 0)
             {
-                response = "No puede Circular desde  16:30 a 19:30";
+                response = "No aviable to be on the road from  7:30 to 9:30";
+                return response;
+
+            }
+
+            else if (value == 1)
+            {
+                response = "No aviable to be on the road from  16:30 to 19:30";
                 return response;
 
 
             }
+
 
             else
             {
-                response = "Puede Circular";
+                response = "Aviable to be on the road";
                 return response;
             }
         }
+
+        
 
 
     }
