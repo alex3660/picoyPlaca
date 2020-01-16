@@ -29,72 +29,19 @@ namespace picoyPlaca
         {
             // Get Information
             richTextBox1.Text = "";
-            picoPlaca picoPlaca = new picoPlaca();
-            picoPlaca.Number = txtNumber.Text;
-            picoPlaca.Date = mtxtDate.Text;
-            picoPlaca.Hour = mtxtHour.Text;
+            picoPlaca objpicoPlaca = new picoPlaca();
+            objpicoPlaca.Number = txtNumber.Text;
+            objpicoPlaca.Date = mtxtDate.Text;
+            objpicoPlaca.Hour = mtxtHour.Text;
 
-            //Day of the week
-            try
-            {
-                DateTime dateAux = new DateTime();
-                dateAux = Convert.ToDateTime(picoPlaca.Date);
-                day = dateAux.ToString("dddd");
-                
-            }
-            catch (FormatException err)
-            {
-                MessageBox.Show("Enter a Valid Date");
-                richTextBox1.Text = "";
-            }
-
-
-
-            //Number
-            try
-            {
-                lastNumber = picoPlaca.Number.Substring(picoPlaca.Number.Length - 1, 1);
-                numberAux = Convert.ToInt32(lastNumber);
-                
-            }
-            catch (ArgumentOutOfRangeException err)
-            {
-                MessageBox.Show("Enter a Valid Number");
-                richTextBox1.Text = "";
-            }
-
-
-            //Hour
-            try
-            {
-                DateTime hourAux = new DateTime();
-                hourAux = Convert.ToDateTime(picoPlaca.Hour);
-                var hourtime = hourAux.ToString("HHmm");
-                var hourtimeString = hourAux.ToString("HH:mm tt");
-                nowHours = Convert.ToInt32(hourtime);
-                
-            }
-            catch (FormatException err)
-            {
-                MessageBox.Show("Enter a Valid Hour");
-                richTextBox1.Text = "";
-            }
-
-
-
-            // PREDICTOR
-            richTextBox1.Text= picoPlaca.PicoPlacas(day, numberAux, nowHours);
+            //call the  method PicoPlacas in the class picoPlaca and set the response of the query
+            richTextBox1.Text= objpicoPlaca.PicoPlacas(objpicoPlaca);
                       
             
 
-        }
-
-        
+        }     
        
-
-
-
-    
+                      
 
         private void numbreKeyPress(object sender, KeyPressEventArgs e)
         {
