@@ -1,0 +1,16 @@
+C:\Users\al_ag\source\repos\picoyPlaca\picoYPacaTest.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\al_ag\source\repos\picoyPlaca\picoYPacaTest.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\al_ag\source\repos\picoyPlaca\picoYPacaTest.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\al_ag\source\repos\picoyPlaca\picoYPacaTest.Test\bin\Debug\picoYPacaTest.Test.dll
+C:\Users\al_ag\source\repos\picoyPlaca\picoYPacaTest.Test\bin\Debug\picoYPacaTest.Test.pdb
+C:\Users\al_ag\source\repos\picoyPlaca\picoYPacaTest.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\al_ag\source\repos\picoyPlaca\picoYPacaTest.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\al_ag\source\repos\picoyPlaca\picoYPacaTest.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\al_ag\source\repos\picoyPlaca\picoYPacaTest.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\al_ag\source\repos\picoyPlaca\picoYPacaTest.Test\obj\Debug\picoYPacaTest.Test.csprojAssemblyReference.cache
+C:\Users\al_ag\source\repos\picoyPlaca\picoYPacaTest.Test\obj\Debug\picoYPacaTest.Test.csproj.CopyComplete
+C:\Users\al_ag\source\repos\picoyPlaca\picoYPacaTest.Test\obj\Debug\picoYPacaTest.Test.dll
+C:\Users\al_ag\source\repos\picoyPlaca\picoYPacaTest.Test\obj\Debug\picoYPacaTest.Test.pdb
+C:\Users\al_ag\source\repos\picoyPlaca\picoYPacaTest.Test\bin\Debug\picoyPlaca.exe
+C:\Users\al_ag\source\repos\picoyPlaca\picoYPacaTest.Test\bin\Debug\picoyPlaca.pdb
+C:\Users\al_ag\source\repos\picoyPlaca\picoYPacaTest.Test\bin\Debug\picoyPlaca.exe.config

@@ -6,4 +6,3 @@ C:\Users\al_ag\source\repos\picoyPlaca\picoyPlaca\obj\Debug\picoyPlaca.Propertie
 C:\Users\al_ag\source\repos\picoyPlaca\picoyPlaca\obj\Debug\picoyPlaca.csproj.GenerateResource.cache
 C:\Users\al_ag\source\repos\picoyPlaca\picoyPlaca\obj\Debug\picoyPlaca.exe
 C:\Users\al_ag\source\repos\picoyPlaca\picoyPlaca\obj\Debug\picoyPlaca.pdb
-C:\Users\al_ag\source\repos\picoyPlaca\picoyPlaca\obj\Debug\picoyPlaca.csprojAssemblyReference.cache

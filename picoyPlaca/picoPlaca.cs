@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace picoyPlaca
 {
-    class picoPlaca
+    public class picoPlaca
     {
         
         private string date;
@@ -31,9 +31,66 @@ namespace picoyPlaca
             this.hour = hour;
         }
 
-        //this method verify the date number of license to be aviable to be on the road
-        public string PicoPlacas(string day, int numberAux, int nowHours)
+
+        public string dayFormat(string date)
+        {            
+            try
+            {
+                DateTime dateAux = new DateTime();
+                dateAux = Convert.ToDateTime(date);
+                string day = dateAux.ToString("dddd");
+                return day;
+            }
+            catch (FormatException err)
+            {
+                return "";
+            }
+        }
+
+        public int hourFormat(string hour)
         {
+            try
+            {
+                DateTime hourAux = new DateTime();
+                hourAux = Convert.ToDateTime(hour);
+                var hourtime = hourAux.ToString("HHmm");
+                int nowHours = Convert.ToInt32(hourtime);
+                return nowHours;
+
+
+            }
+            catch (FormatException err)
+            {
+                return 0;
+
+            }
+        }
+
+        public int lastNumbre(string number)
+        {
+            try
+            {
+                string lastNumber = number.Substring(number.Length - 1, 1);
+                int numberAux = Convert.ToInt32(lastNumber);
+                return numberAux;
+                
+            }
+            catch (ArgumentOutOfRangeException err)
+            {
+                return 0;
+            }
+            
+        }
+
+
+         
+
+//this method verify the date number of license to be aviable to be on the road
+public string PicoPlacas(picoPlaca objpicoyPlaca )
+        {
+            string day = dayFormat(objpicoyPlaca.Date);
+            int numberAux = lastNumbre(objpicoyPlaca.Number);
+            int nowHours = hourFormat(objpicoyPlaca.Hour);    
             
             switch (day)
             {
@@ -161,6 +218,8 @@ namespace picoyPlaca
                 return response;
             }
         }
+
+        
 
         
 

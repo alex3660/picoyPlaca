@@ -27,18 +27,18 @@ namespace picoyPlaca
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            // Get Form's Information
+            // Get Information
             richTextBox1.Text = "";
-            picoPlaca picoPlaca = new picoPlaca();
-            picoPlaca.Number = txtNumber.Text;
-            picoPlaca.Date = mtxtDate.Text;
-            picoPlaca.Hour = mtxtHour.Text;
+            picoPlaca objpicoPlaca = new picoPlaca();
+            objpicoPlaca.Number = txtNumber.Text;
+            objpicoPlaca.Date = mtxtDate.Text;
+            objpicoPlaca.Hour = mtxtHour.Text;
 
             // Get the day of the week in string and catch the excepcion if the format of the date is incorrect
             try
             {
                 DateTime dateAux = new DateTime();
-                dateAux = Convert.ToDateTime(picoPlaca.Date);
+                dateAux = Convert.ToDateTime(objpicoPlaca.Date);
                 day = dateAux.ToString("dddd");
                 
             }
@@ -48,10 +48,12 @@ namespace picoyPlaca
                 
             }
 
+
+
             //get the last Number of the licence and catch the excepcion if yo dont set a number
             try
             {
-                lastNumber = picoPlaca.Number.Substring(picoPlaca.Number.Length - 1, 1);
+                lastNumber = objpicoPlaca.Number.Substring(objpicoPlaca.Number.Length - 1, 1);
                 numberAux = Convert.ToInt32(lastNumber);
                 
             }
@@ -66,7 +68,7 @@ namespace picoyPlaca
             try
             {
                 DateTime hourAux = new DateTime();
-                hourAux = Convert.ToDateTime(picoPlaca.Hour);
+                hourAux = Convert.ToDateTime(objpicoPlaca.Hour);
                 var hourtime = hourAux.ToString("HHmm");
                 nowHours = Convert.ToInt32(hourtime);
                 
@@ -82,12 +84,14 @@ namespace picoyPlaca
 
 
             //call the  method PicoPlacas in the class picoPlaca and set the response of the query
-            richTextBox1.Text= picoPlaca.PicoPlacas(day, numberAux, nowHours);
+            richTextBox1.Text= objpicoPlaca.PicoPlacas(objpicoPlaca);
                       
             
 
-        }           
-        //this method is using to use only numbers and backspace
+        }     
+       
+                      
+
         private void numbreKeyPress(object sender, KeyPressEventArgs e)
         {
             Char chr = e.KeyChar;
