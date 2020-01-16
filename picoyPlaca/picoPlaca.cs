@@ -31,7 +31,7 @@ namespace picoyPlaca
             this.hour = hour;
         }
 
-
+        // Get the day of the week in string and catch the excepcion if the format of the date is incorrect
         public string dayFormat(string date)
         {            
             try
@@ -47,6 +47,7 @@ namespace picoyPlaca
             }
         }
 
+        // get the Hour in format that can be compare as a int
         public int hourFormat(string hour)
         {
             try
@@ -66,6 +67,7 @@ namespace picoyPlaca
             }
         }
 
+        //get the last Number of the licence and catch the excepcion if yo dont set a number
         public int lastNumbre(string number)
         {
             try
